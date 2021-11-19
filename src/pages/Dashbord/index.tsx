@@ -16,8 +16,8 @@ interface Repository{
 }
 
 const Dashbord: React.FC = () => {
- const [newRepo, setNewRepo] = useState([]);
- const [inputError, setInputError] = useState([]);
+ const [newRepo, setNewRepo] = useState(''); // [] foi alterado para '' devido erro
+ const [inputError, setInputError] = useState('');
  const [repositories, setRepositories] = useState<Repository[]>(() => {
      const storageRepositories = localStorage.getItem('@githubExplorer:repositories');
 
